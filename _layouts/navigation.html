@@ -112,24 +112,7 @@ layout: base
                     <button class="usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="sidenav-4">
                         <span>Knowledge Sharing</span>
                     </button>
-                    <ul id="sidenav-4" class="usa-nav-submenu">
-                        <li>
-                            <a href="">Get Started</a>
-                        </li>
-                        <li>
-                            <a href="">About Performance.gov</a>
-                        </li>
-                        <li>
-                            <a href="">FAQs</a>
-                        </li>
-                        <li>
-                            <a href="">Performance Framework </a>
-                        </li>
-                        <li>
-                            <a href="">Key Partners</a>
-                        </li>
 
-                    </ul>
                 </li>
 
             </ul>
@@ -162,33 +145,7 @@ layout: base
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
-    $(window).load(function(){
-        var $container = $('.portfolioContainer');
-        $container.isotope({
-            filter: '*',
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false
-            }
-        });
 
-        $('.portfolioFilter a').click(function(){
-            $('.portfolioFilter .current').removeClass('current');
-            $(this).addClass('current');
-
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-            return false;
-        });
-    });
 
 
 </script>
@@ -201,15 +158,14 @@ layout: base
     {{ content }}
 
 </main>
-<footer class="usa-footer usa-footer-big" role="contentinfo">
+<footer class="usa-footer site-footer" role="contentinfo">
 
     <div class="usa-footer-secondary_section usa-footer-big-secondary-section">
         <div class="usa-grid">
             <div class="usa-footer-logo usa-width-one-half">
-                <img class="usa-footer-logo-img" src="{{ site.baseurl }}/img/homepage_images/logo-gsa.png" alt="Logo image"> <img class="usa-footer-logo-img" src="{{ site.baseurl }}/img/homepage_images/logo-omb.png" alt="Logo image">
+                <img class="usa-footer-logo-img" src="{{ site.baseurl }}/assets/images/logos/footer-logo2.png" alt="Logo image"> <img class="usa-footer-logo-img" src="{{ site.baseurl }}/assets/images/logos/footer-logo1.png" alt="Logo image">
                 <h3 class="usa-footer-logo-heading">General Services Administration & the Office of Management and Budget</h3>
             </div>
-            <
         </div>
     </div>
 </footer>
