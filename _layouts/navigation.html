@@ -1,0 +1,216 @@
+---
+layout: base
+---
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<header class="usa-header usa-header-extended" role="banner">
+    <!-- Gov banner BEGIN -->
+    <section class="usa-banner">
+        <div class="usa-accordion">
+            <header class="usa-banner-header">
+                <div class="usa-grid usa-banner-inner">
+                    <img src="{{ site.baseurl }}/img/favicons/favicon-57.png" alt="U.S. flag">
+                    <p>An official website of the United States government</p>
+                    <button class="usa-accordion-button usa-banner-button" aria-expanded="false" aria-controls="gov-banner">
+                        <span class="usa-banner-button-text">Here's how you know</span>
+                    </button>
+                </div>
+            </header>
+            <div class="usa-banner-content usa-grid usa-accordion-content" id="gov-banner">
+                <div class="usa-banner-guidance-gov usa-width-one-half">
+                    <img class="usa-banner-icon usa-media_block-img" src="{{ site.baseurl }}/img/icon-dot-gov.svg" alt="Dot gov">
+                    <div class="usa-media_block-body">
+                        <p>
+                            <strong>The .gov means it’s official.</strong>
+                            <br> Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re on a federal government site.
+                        </p>
+                    </div>
+                </div>
+                <div class="usa-banner-guidance-ssl usa-width-one-half">
+                    <img class="usa-banner-icon usa-media_block-img" src="{{ site.baseurl }}/img/icon-https.svg" alt="Https">
+                    <div class="usa-media_block-body">
+                        <p>
+                            <strong>The site is secure.</strong>
+                            <br> The <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gov banner END -->
+    <div class="usa-navbar">
+        <button class="usa-menu-btn">Menu</button>
+        <div class="usa-logo" id="logo">
+            <a href="{{ site.baseurl }}/" accesskey="1" title="Home" aria-label="Home">
+                {% if site.logo %}
+                <img class="logo-size" src="{{ site.logo | prepend: site.baseurl }}" alt="United States CFO logo">
+                {% else %}
+                <h1 class="usa-header-title">{{ site.title }}</h1>
+                {% endif %}
+            </a>
+        </div>
+    </div>
+    <nav role="navigation" class="usa-nav">
+        <div class="usa-nav-inner">
+            <button class="usa-nav-close">
+                <img src="/assets/images/close.png" alt="close">
+            </button>
+            <ul class="usa-nav-primary usa-accordion">
+                <li>
+                    <a class="usa-nav-link" href="{{ site.baseurl }}/about-our-council">
+                        <span>About Our Council</span>
+                    </a>
+                </li>
+                <li>
+                    <button class="usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="megamenu-1">
+                        <span>Priority Areas</span>
+                    </button>
+                    {% for subnav_item in nav_item.children %}
+                    <ul>
+                        <li>
+                            <a href="subnav_item.url">first priority</a>
+                        </li>
+                    </ul>
+                    {% endfor %}
+
+<!--                    <ul class="usa-nav-submenu usa-megamenu usa-grid-full" id="megamenu-1">-->
+<!--                        <li class="usa-megamenu-col">-->
+<!--                            <ul>-->
+<!--                                <li>-->
+<!--                                    <a href="{{ site.baseurl }}/_priority/priority-first.md">First Priority</a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="{{ site.baseurl }}/_priority/priority-first.md">Second Priority</a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+                </li>
+                <li>
+                    <button class="usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="megamenu-2">
+                        <span>Collaboration Partners</span>
+                    </button>
+                    <ul class="usa-nav-submenu usa-megamenu usa-grid-full" id="megamenu-2">
+                        <li class="usa-megamenu-col">
+                            <ul>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class= "usa-nav-link" href="{{ site.baseurl }}/data/">
+                        <span>Policies and Guidlance</span>
+                    </a>
+                </li>
+
+
+
+
+
+                <li>
+                    <button class="usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="sidenav-4">
+                        <span>Knowledge Sharing</span>
+                    </button>
+                    <ul id="sidenav-4" class="usa-nav-submenu">
+                        <li>
+                            <a href="">Get Started</a>
+                        </li>
+                        <li>
+                            <a href="">About Performance.gov</a>
+                        </li>
+                        <li>
+                            <a href="">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="">Performance Framework </a>
+                        </li>
+                        <li>
+                            <a href="">Key Partners</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+            <div class="usa-nav__secondary secondary-nav-padding">
+                <ul class="usa-nav__secondary-links">
+                    {% for nav_item in include.secondary_navigation %}
+                    <li class="usa-nav__secondary-item">
+                        <a href="{{ nav_item.url | prepend: site.baseurl }}">{{ nav_item.name | escape }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% include searchgov/form.html searchgov=site.searchgov %}
+            </div>
+        </div>
+    </nav></header>
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("backtotop").style.display = "block";
+        } else {
+            document.getElementById("backtotop").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    $(window).load(function(){
+        var $container = $('.portfolioContainer');
+        $container.isotope({
+            filter: '*',
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+
+        $('.portfolioFilter a').click(function(){
+            $('.portfolioFilter .current').removeClass('current');
+            $(this).addClass('current');
+
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+            return false;
+        });
+    });
+
+
+</script>
+<button onclick="topFunction()" id="backtotop" title="Go to top" style="display: none;">˄ Top</button>
+
+<div class="usa-overlay"></div>
+
+<main class="usa-grid usa-section usa-content usa-layout-docs" id="main-content">
+    <script src="{{ site.baseurl }}/js/uswds.min.js"></script>
+    {{ content }}
+
+</main>
+<footer class="usa-footer usa-footer-big" role="contentinfo">
+
+    <div class="usa-footer-secondary_section usa-footer-big-secondary-section">
+        <div class="usa-grid">
+            <div class="usa-footer-logo usa-width-one-half">
+                <img class="usa-footer-logo-img" src="{{ site.baseurl }}/img/homepage_images/logo-gsa.png" alt="Logo image"> <img class="usa-footer-logo-img" src="{{ site.baseurl }}/img/homepage_images/logo-omb.png" alt="Logo image">
+                <h3 class="usa-footer-logo-heading">General Services Administration & the Office of Management and Budget</h3>
+            </div>
+            <
+        </div>
+    </div>
+</footer>
+<!-- Update the link path to where your JavaScript file is located. For example: /path/to/your/assets/js/lib/uswds.min.js -->
