@@ -1,6 +1,6 @@
 ---
 layout: knowledge-sharing-landing
-title: July 2016&#58; Uniform Guidance Promising Practices in Implementation
+title: July 2016&#58; Uniform Guidance#58; Promising Practices in Implementation
 subtitle: Uniform Guidance Promising Practices in Implementation
 permalink: /knowledge-sharing/july-2016-uniform-guidance-promising-practices-in-implementation/
 type: Grant
@@ -102,7 +102,7 @@ AGA Tools: [http://www.agacgfm.org/tools](https://www.agacgfm.org/tools)
 
 **CLOSING REMARKS**
 
-*Karen Lee, Branch Chief, Office of Federal Financial Management, OMB
+* Karen Lee, Branch Chief, Office of Federal Financial Management, OMB
 
 {% include youtube_embed.html id="VkY5zt7jKWg" %} 
 
